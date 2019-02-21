@@ -1,0 +1,119 @@
+html, body {
+  height: 100vh;
+  margin:0em;
+  overflow: hidden;
+}
+
+.parent {
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.one {
+  background-color: rgb(50, 50, 50);
+}
+
+.two {
+  background-color: rgb(0, 0, 0);
+  text-shadow: 4px 0px rgb(0, 0, 0);
+}
+
+.three {
+  background-color: #c13d00;
+}
+
+.four {
+  background-color: #00313B;
+  position: relative;
+}
+
+.five {
+  background-color: white;
+  position: relative;
+  text-shadow: 4px 0px #324145;;
+}
+
+.six {
+  background-color: white;
+  position: relative;
+}
+
+.seven {
+  background-color: black;
+  position: relative;
+}
+
+.seventext {
+  color: white;
+  text-align: left;
+  font: 60px blippo, sans-serif;
+  word-wrap: break-word;
+  font-weight: 900;
+   -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.sixtext {
+  color: black;
+  text-align: left;
+  font: 80px blippo, sans-serif;
+  word-wrap: break-word;
+  font-weight: 900;
+   -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.dtext {
+  color: white;
+  text-align: left;
+  font: 60px blippo, sans-serif;
+  word-wrap: break-word;
+  font-weight: 900;
+   -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.text {
+  padding: 1px 1px 1px 1px;
+  color: white;
+  text-align: left;
+  font: 80px blippo, sans-serif;
+  word-wrap: break-word;
+  font-weight: 900;
+   -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.header {
+  color: white;
+  text-align: center;
+  font: 100px blippo, sans-serif;
+  word-wrap: break-word;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.polymorph {
+    fill:#324145;
+    width:100%;
+    left:0; top:0; width:100%; height:100%
+}
+
+
+
+
+

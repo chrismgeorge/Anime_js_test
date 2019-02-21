@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./node_modules/animejs/lib/anime.min.js"></script>
+    </head>
+    <body>
+        <div class="parent row">
+            <section class="one">
+                <div class="header">
+                    Genesis
+                </div>
+            </section>
+            <section class="two" onmousedown="twoFunction()">
+                <div class="text">
+                    <p>
+                        In my room, Johannes de old man ominously watched over me...
+                    </p>
+                    <p>
+                        De young man?
+                    </p>
+
+                </div>
+            </section>
+            <section class="four" onmousedown="fourFunction()">
+                <div class="text" style="position: absolute;">
+                    <p>
+                        My room was <i>the</i> world. I've been in my room for about an eternity.
+                    </p>
+                    <p>
+                        Alone so long, water, has become my best friend.
+                    </p>
+                    <p>
+                        Count the droplets with me?
+                    </p>
+                </div>
+                <canvas class="fireworks" style="position: absolute;">
+                </canvas>
+            </section>
+            <section class="five" onmousedown="fiveFunction()">
+                <div class="dtext" style="position: absolute;">
+                    <p>
+                        How many seconds in eternity?
+                    </p>
+                    <p>
+                        Every hundred years, or so, a little birdie comes to sharpen its beak on a Diamond Mountain two miles high, two miles wide, and two miles deep.
+                    </p>
+                    <p>
+                        When the whole mountain is worn away, the first second of eternity will have passed.
+                    </p>
+                </div>
+                <svg viewBox="0 0 1140.5 687.3">
+                    <polygon class="polymorph" points="1140.5,687.3 0,687.3 0,0 570.3,0 1140.5,0 "/>
+                </svg>
+            </section>
+            <section class="six" onmousedown="sixFunction()">
+                <div class="sixtext" style="position: absolute;">
+                    <p>
+                        Is my room eternity?
+                    </p>
+                    <p>
+                        With these four, oily, black walls.
+                    </p>
+                    <p>
+                        With this body, turned to dust, when I was to be delivered on the third day.
+                    </p>
+                </div>
+                <canvas class="oil" style="position: absolute;">
+                </canvas>
+            </section>
+            <section class="seven" onmousedown="sixFunction()">
+                <div class="seventext" style="position: absolute;">
+                    <p>
+                      Genesis says...
+                    </p>
+                    <p>
+                      In the beginning God created the heavens and the earth.
+                      Now the earth was formless and empty, and darkness was over the surface of the deep, and the Spirit of God was hovering over the waters.
+                    </p>
+                </div>
+            </section>
+            <section class="seven" onmousedown="sixFunction()">
+                <div class="seventext" style="position: absolute;">
+                    <p>
+                      Then God stopped and no light was created. And now I live in that darkness.
+                    </p>
+                    <p>
+                      Still though, Adam and Eve walked up to me and asked, "Sup?"
+                    </p>
+                    <p>
+                      And I told them.
+                      And They laughed.
+                      And I didn't.
+                    </p>
+                </div>
+            </section>
+            <section class="seven" onmousedown="sixFunction()">
+                <div class="seventext" style="position: absolute;">
+                    <p>
+                      I said...
+                      You are much heavier than you used to-
+                      I'm sorry, I didn't mean-
+                      It's just. Words. Wuurds.
+                      How do you words?
+                      Desert words.
+                      Surviving with words, through words.
+                      Walking through words.
+                      Kill a horse for words. Kill an Austrian for words.
+                      Four words are all you need to bid thee a-do, to you, to what do i-o-u?
+                      What kind of blue? Light, do you need?
+                      There isn't any light? Sorry...
+                    </p>
+                </div>
+            </section>
+            <section class="seven" onmousedown="sixFunction()">
+                <div class="seventext" style="position: absolute;">
+                    <p>
+                      So God said,
+                    </p>
+                    <p>
+                      Let there be light.
+                    </p>
+                </div>
+            </section>
+            <section class="seven" onmousedown="sixFunction()">
+                <div class="seventext" style="position: absolute;">
+                    <p>
+                      Why? Why follow the light?
+                      Light might help, maybe, but I am not actually sure.
+                    </p>
+                    <p>
+                      Cause, is light the problem, or am I?
+                    </p>
+                    <p>
+                      I'm going back now. To end this. End whatever. this... is. These words.
+                    </p>
+                </div>
+            </section>
+            <section class="seven" onmousedown="sixFunction()">
+                <div class="seventext" style="position: absolute;">
+                    <p>
+                      They said,
+                    </p>
+                    <p>
+                      Thanks for the words. Even though we aren't sure how to use them.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+    <script>
+
+        // Number 2
+        var never_rotated = false;
+        function twoFunction(){
+            if (never_rotated == false){
+                var elements = document.querySelectorAll('section.two');
+                anime.timeline({
+                      targets: elements,
+                      rotate: '2turn',
+                      duration: 1000,
+                    }).add({ targets: elements, background: 'rgb(255,255,255)' }, 0);
+                never_rotated = true;
+            }
+        }
+
+        // Number 4
+        var hasClickedFour = false;
+        var canvasEl = document.querySelector('.fireworks');
+        var ctx = canvasEl.getContext('2d');
+        var numberOfParticules = 1;
+        var pointerX = 0;
+        var pointerY = 0;
+        var tap = 'mousemove';
+        var colors = ['#0060BF', '#00407F', '#007FFF', '#00D4FF'];
+
+        function setCanvasSize() {
+          canvasEl.width = window.innerWidth * 2;
+          canvasEl.height = window.innerHeight * 2;
+          canvasEl.style.width = window.innerWidth + 'px';
+          canvasEl.style.height = window.innerHeight + 'px';
+          canvasEl.getContext('2d').scale(2, 2);
+        }
+
+        function updateCoords(e) {
+          pointerX = e.clientX || e.touches[0].clientX;
+          pointerY = e.clientY || e.touches[0].clientY;
+        }
+
+        function setParticuleDirection(p) {
+          var angle = anime.random(0, 360) * Math.PI / 180;
+          return {
+            x: p.x + p.radius * Math.cos(angle),
+            y: window.innerHeight + anime.random(-500, 0)
+          }
+        }
+
+        function createParticule(x) {
+          var p = {};
+          p.x = x;
+          p.radius = anime.random(16, 32);
+          p.y = -p.radius
+
+          p.color = colors[anime.random(0, colors.length - 1)];
+          p.endPos = setParticuleDirection(p);
+
+          // javascript drawing function
+          p.draw = function() {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true);
+            ctx.fillStyle = p.color;
+            ctx.fill();
+          }
+
+          return p;
+        }
+
+        function renderParticule(anim) {
+          for (var i = 0; i < anim.animatables.length; i++) {
+            anim.animatables[i].target.draw();
+          }
+        }
+
+        function animateParticules(x, y) {
+          var particules = [];
+          for (var i = 0; i < numberOfParticules; i++) {
+            x = anime.random(0, window.innerWidth);
+            particules.push(createParticule(x, y));
+          }
+          anime.timeline().add({
+            targets: particules,
+            x: function(p) { return p.endPos.x; },
+            y: function(p) { return p.endPos.y; },
+            radius: function(p) { return 1/p.radius*2; },
+            duration: function(p) { return p.radius*100; },
+            easing: 'easeOutExpo',
+            update: renderParticule
+          })
+        }
+
+        var render = anime({
+          duration: Infinity,
+          update: function() {
+            ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
+          }
+        });
+
+        document.addEventListener(tap, function(e) {
+          if (hasClickedFour) {
+            render.play();
+            updateCoords(e);
+            animateParticules(pointerX, pointerY);
+          }
+        }, false);
+
+        var curDuration = 1100;
+        function autoClick() {
+          curDuration -= 100
+          if (curDuration <= 100) {
+            curDuration = 100;
+          }
+          animateParticules(anime.random(0, window.innerWidth), anime.random(0, 1));
+          anime({duration: curDuration}).finished.then(autoClick);
+        }
+
+        setCanvasSize();
+        window.addEventListener('resize', setCanvasSize, false);
+
+        function fourFunction(){
+            hasClickedFour = true;
+            autoClick();
+        }
+
+        var hasClickedFive = false
+        function fiveFunction() {
+            if (hasClickedFive == false) {
+                anime({
+                  targets: '.polymorph',
+                  points: [
+                    { value: '1140.5,687.3 0,687.3 441.8,461.9 564.2,161.9 756.7,306.7' },
+                  ],
+                  easing: 'easeOutQuad',
+                  duration: 1000,
+                  fill:'#B9F2FF',
+                });
+                hasClickedFive = true;
+            }
+        }
+
+        // Start of Six
+        var canvasElOil = document.querySelector('.oil');
+        var ctxOil = canvasElOil.getContext('2d');
+
+        function setCanvasSizeOil() {
+          canvasElOil.width = window.innerWidth * 2;
+          canvasElOil.height = window.innerHeight * 2;
+          canvasElOil.style.width = window.innerWidth + 'px';
+          canvasElOil.style.height = window.innerHeight + 'px';
+          canvasElOil.getContext('2d').scale(2, 2);
+        }
+
+        function createParticuleOil() {
+          var p = {};
+          p.x = anime.random(0, window.innerWidth);
+          p.y = anime.random(0, window.innerHeight);
+          p.radius = anime.random(16, 48);
+          p.color = '#000000';
+
+          // javascript drawing function
+          p.draw = function() {
+            ctxOil.beginPath();
+            ctxOil.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true);
+            ctxOil.fillStyle = p.color;
+            ctxOil.fill();
+          }
+
+          return p;
+        }
+
+        var numberOfParticulesOil = 5;
+        function animateParticulesOil() {
+          var particules = [];
+          for (var i = 0; i < numberOfParticulesOil; i++) {
+            particules.push(createParticuleOil());
+          }
+
+          anime.timeline().add({
+            targets: particules,
+            radius: function(p) { return p.radius*2; },
+            duration: function(p) { return p.radius*400; },
+            easing: 'easeOutExpo',
+            update: renderParticule,
+          });
+        }
+
+        setCanvasSizeOil();
+        window.addEventListener('resize', setCanvasSizeOil, false);
+
+        var hasClickedSix = false;
+        function sixFunction() {
+            if (hasClickedSix == false) {
+                animateParticulesOil();
+            }
+        }
+
+
+
+    </script>
+
+    </body>
+</html>
