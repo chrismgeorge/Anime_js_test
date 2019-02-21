@@ -6,25 +6,25 @@
     </head>
     <body>
         <div class="parent row">
-            <section class="one">
+            <section class="one" onmousedown="oneFunction()">
                 <div class="header">
                     Genesis
                 </div>
             </section>
             <section class="two" onmousedown="twoFunction()">
               <svg viewBox="0 0 357.2 513" style="position:absolute;left:0;top:0;width:100%;height:100%;">
-                      <path class="jo_face" d="M355,238.8c-5.4-6.7-8.5-4.4-13-9.8c-14-16.5,9.2-44.7,10.6-92.7c0.5-18.8,1-34.3-8.9-48.8
-  c-16.4-24-42.3-33.3-42.3-33.3c-8.1-2.9-16.6-4.4-19.5-11.4c-2.8-6.8,2.8-11.5,0.8-19.5C280,12.9,267.1,7.7,261.5,5.5
-  c-16-6.4-30.1-4.3-40.7-3.3c-37.6,3.7-40.2-4.5-67.5-1.6C113,4.8,83.8,26.3,73.7,33.9c-39,29.5-73.9,80.2-69.9,132.5
-  c2.6,34,20.9,43.1,19.5,87c-1.3,39.7-17.4,67.2-0.8,87.8c4.7,5.9,11.2,10.1,22,24.4c0.6,0.8,9,12,15.4,24.4
-  c15.6,29.8,8.6,44.3,18.7,67.5c14.2,32.8,47.1,47.5,53.7,50.4c32,14.3,61.2,8.5,75.6,5.7c3.5-0.7,62.1-13.1,93.5-61.8
-  c6.1-9.5,13-20.1,16.3-35.8c3.3-15.8-0.2-21.5,4.9-39.8c1.7-6.1,4.7-16.5,12.2-27.6c8-11.9,12.2-11.4,17.9-20.3
-  c1.7-2.7,5.2-8.7,7.3-41.5C362.2,251.2,359.1,243.8,355,238.8z M144.5,288.4c-6.4,13.3-34.7,19.4-48.8,7.3c-4.4-3.8-9.4-11-7.3-16.3
-  c2.8-6.8,31.7-6.5,31.7-6.5s22.4,0.4,25.2,6.5C147,283.2,144.9,287.5,144.5,288.4z M176.2,378.7c-1.5,3.7-24.9,0.1-25.2-4.1
-  c-0.2-2.2,6.3-5.3,12.2-4.9C170.8,370.2,177,376.5,176.2,378.7z M194.9,375.4c-1-1.8,2.2-6.4,6.5-8.1c5.7-2.3,12.2,1.1,12.2,3.3
-  C213.6,374,196.7,378.6,194.9,375.4z M268,280.3c-0.5,3.1-8.3,4-23.6,5.7c-21,2.4-24.9-0.3-26.8-2.4c-2.1-2.4-3.7-6.5-2.4-9.8
-  c3-7.7,20.9-7.6,32.5-4.9C256.9,271.1,268.6,276.4,268,280.3z"
-/>
+                 <path class="jo_face" d="M355,238.8c-5.4-6.7-8.5-4.4-13-9.8c-14-16.5,9.2-44.7,10.6-92.7c0.5-18.8,1-34.3-8.9-48.8
+                    c-16.4-24-42.3-33.3-42.3-33.3c-8.1-2.9-16.6-4.4-19.5-11.4c-2.8-6.8,2.8-11.5,0.8-19.5C280,12.9,267.1,7.7,261.5,5.5
+                    c-16-6.4-30.1-4.3-40.7-3.3c-37.6,3.7-40.2-4.5-67.5-1.6C113,4.8,83.8,26.3,73.7,33.9c-39,29.5-73.9,80.2-69.9,132.5
+                    c2.6,34,20.9,43.1,19.5,87c-1.3,39.7-17.4,67.2-0.8,87.8c4.7,5.9,11.2,10.1,22,24.4c0.6,0.8,9,12,15.4,24.4
+                    c15.6,29.8,8.6,44.3,18.7,67.5c14.2,32.8,47.1,47.5,53.7,50.4c32,14.3,61.2,8.5,75.6,5.7c3.5-0.7,62.1-13.1,93.5-61.8
+                    c6.1-9.5,13-20.1,16.3-35.8c3.3-15.8-0.2-21.5,4.9-39.8c1.7-6.1,4.7-16.5,12.2-27.6c8-11.9,12.2-11.4,17.9-20.3
+                    c1.7-2.7,5.2-8.7,7.3-41.5C362.2,251.2,359.1,243.8,355,238.8z M144.5,288.4c-6.4,13.3-34.7,19.4-48.8,7.3c-4.4-3.8-9.4-11-7.3-16.3
+                    c2.8-6.8,31.7-6.5,31.7-6.5s22.4,0.4,25.2,6.5C147,283.2,144.9,287.5,144.5,288.4z M176.2,378.7c-1.5,3.7-24.9,0.1-25.2-4.1
+                    c-0.2-2.2,6.3-5.3,12.2-4.9C170.8,370.2,177,376.5,176.2,378.7z M194.9,375.4c-1-1.8,2.2-6.4,6.5-8.1c5.7-2.3,12.2,1.1,12.2,3.3
+                    C213.6,374,196.7,378.6,194.9,375.4z M268,280.3c-0.5,3.1-8.3,4-23.6,5.7c-21,2.4-24.9-0.3-26.8-2.4c-2.1-2.4-3.7-6.5-2.4-9.8
+                    c3-7.7,20.9-7.6,32.5-4.9C256.9,271.1,268.6,276.4,268,280.3z"
+                  />
                 </svg>
                 <div class="text" style="position: absolute;">
                     <p>
@@ -39,7 +39,7 @@
             <section class="four" onmousedown="fourFunction()">
                 <div class="text" style="position: absolute;">
                     <p>
-                        My room was <i>the</i> world. I've been in my room for about an eternity.
+                        I've been in my room for an eternity.
                     </p>
                     <p>
                         Alone so long, water, has become my best friend.
@@ -54,35 +54,32 @@
             <section class="five" onmousedown="fiveFunction()">
                 <div class="dtext" style="position: absolute;">
                     <p>
-                        How many seconds are there in eternity?
+                        So, how many seconds are there in eternity?
                     </p>
                     <p>
-                        Every hundred years, or so, a little birdie comes to sharpen its beak on a Diamond Mountain two miles high, two miles wide, and two miles deep.
+                        Well, every hundred years, or so, a little birdie comes to sharpen its beak on a Diamond Mountain two miles high, two miles wide, and two miles deep.
                     </p>
                     <p>
                         When the whole mountain is worn away, the first second of eternity will have passed.
                     </p>
                 </div>
-                <svg viewBox="0 0 1140.5 687.3">
+                <svg viewBox="0 0 1140.5 687.3" style="left:0;top:0;width:100%;height:100%;">
                     <polygon class="polymorph" points="1140.5,687.3 0,687.3 0,0 570.3,0 1140.5,0 "/>
                 </svg>
             </section>
             <section class="six" onmousedown="sixFunction()">
                 <div class="sixtext" style="position: absolute;">
                     <p>
-                        Is my room eternity?
+                        So, is my room eternity? My four, oily, black walls?
                     </p>
                     <p>
-                        With these four, oily, black walls.
-                    </p>
-                    <p>
-                        With this body, turned to dust, when I was to be delivered on the third day.
+                        Or is my body eternity? That would be complete bullshit because I- was supposed to be delivered on the third day.
                     </p>
                 </div>
                 <canvas class="oil" style="position: absolute;">
                 </canvas>
             </section>
-            <section class="seven" onmousedown="sixFunction()">
+            <section class="seven">
                 <div class="seventext" style="position: absolute;">
                     <p>
                       Genesis says...
@@ -93,13 +90,13 @@
                     </p>
                 </div>
             </section>
-            <section class="seven" onmousedown="sixFunction()">
+            <section class="seven">
                 <div class="seventext" style="position: absolute;">
                     <p>
-                      Then God stopped and no light was created. And now I live in that darkness.
+                      Then God stopped, and no light was created. And now, I live in that darkness.
                     </p>
                     <p>
-                      Still though, Adam and Eve walked up to me and asked, "Sup?"
+                      Still though, Adam and Eve walked up to me and asked, "Wassup?"
                     </p>
                     <p>
                       And I told them.
@@ -108,17 +105,15 @@
                     </p>
                 </div>
             </section>
-            <section class="seven" onmousedown="sixFunction()">
+            <section class="seven">
                 <div class="seventext" style="position: absolute;">
                     <p>
-                      I said...
-                      You are much heavier than you used to-
+                      I had said...
+                      You are much prettier than you used to-
                       I'm sorry, I didn't mean-
                       It's just. Words. Wuurds.
-                      How do you words?
-                      Desert words.
-                      Surviving with words, through words.
-                      Walking through words.
+                      How do you words? Walking with words?
+                      Life and death by words, life and death through words.
                       Kill a horse for words. Kill an Austrian for words.
                       Four words are all you need to bid thee a-do, to you, to what do i-o-u?
                       What kind of blue? Light, do you need?
@@ -126,7 +121,7 @@
                     </p>
                 </div>
             </section>
-            <section class="seven" onmousedown="sixFunction()">
+            <section class="seven" onmousedown="lightFunction()">
                 <div class="seventext" style="position: absolute;">
                     <p>
                       So God said,
@@ -135,34 +130,62 @@
                       Let there be light.
                     </p>
                 </div>
+
+                <svg viewBox="0 0 360.7 513" style="position: absolute; align-content: center;">
+                  <style type="text/css">
+                    .st0{fill:url(#SVGID_1_)}
+                  </style>
+                  <radialGradient id="SVGID_1_" cx="195.3333" cy="226.7015" r="123" gradientUnits="userSpaceOnUse">
+                    <stop  offset="0" style="stop-color:#29ABE2"/>
+                    <stop  offset="1" style="stop-color:#000000"/>
+                  </radialGradient>
+                  <radialGradient id="SVGID_2_" cx="195.3333" cy="226.7015" r="123.5" gradientUnits="userSpaceOnUse">
+                    <stop  offset="0" style="stop-color:#29ABE2"/>
+                    <stop  offset="1" style="stop-color:#000000"/>
+                  </radialGradient>
+                  <circle class="st0" cx="195.3" cy="226.7" r="123" style="opacity: 0"/>
+                </svg>
+
             </section>
-            <section class="seven" onmousedown="sixFunction()">
+            <section class="seven" onmousedown="fadeTextFunction()">
                 <div class="seventext" style="position: absolute;">
                     <p>
                       Why? Why follow the light?
-                      Light might help, maybe, but I am not actually sure.
+                    </p>
+                    <p class="fademein" style="opacity: 0">
+                      Light might help, maybe, but I am not actually sure. Cause, and I ask myself this a lot now. Is the lack of light the problem, or am I the problem? Would the light help? Or just make things worse? Am I right to be scared of the light?
                     </p>
                     <p>
-                      Cause, is light the problem, or am I?
-                    </p>
-                    <p>
-                      I'm going back now. To end this. End whatever. this... is. These words.
+                      What do you think?
                     </p>
                 </div>
             </section>
-            <section class="seven" onmousedown="sixFunction()">
+            <section class="seven">
                 <div class="seventext" style="position: absolute;">
                     <p>
                       They said,
                     </p>
                     <p>
-                      Thanks for the words. Even though we aren't sure how to use them.
+                      Thanks for the words. Even though we aren't sure how to use them mumurmsovoiwjroavihoirn sidh.
                     </p>
                 </div>
             </section>
         </div>
 
     <script>
+
+        var hasClickedOne = false
+        function oneFunction() {
+            if (hasClickedOne == false) {
+                anime({
+                  targets: '.header',
+                  translateY: 500,
+                  rotateY:180,
+                  duration: 3000,
+                });
+                hasClickedOne = true;
+            }
+        }
 
         // Number 2
         var never_rotated = false;
@@ -298,6 +321,30 @@
                   fill:'#B9F2FF',
                 });
                 hasClickedFive = true;
+            }
+        }
+
+        var hasClickLight = false
+        function lightFunction() {
+            if (hasClickLight == false) {
+                anime({
+                  targets: '.st0',
+                  opacity: 1,
+                  duration: 20000,
+                });
+                hasClickLight = true;
+            }
+        }
+
+        var hasFadedText = false
+        function fadeTextFunction() {
+            if (hasFadedText == false) {
+                anime({
+                  targets: '.fademein',
+                  opacity: 1,
+                  duration: 20000,
+                });
+                hasFadedText = true;
             }
         }
 
